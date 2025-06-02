@@ -54,7 +54,7 @@ class _SettingsAdvert(AutoUnload):
     def start_delay(self):
         """Start the next delay in the loop to send messages."""
         self._delay = Delay(
-            message_frequency.get_int() * 60, self.send_adverts,
+            int(message_frequency) * 60, self.send_adverts,
         )
 
     @staticmethod
